@@ -22,12 +22,12 @@ try_times=range(20,100,20) #the time horizons which we try out
 for total_time in try_times: #try it for different time horizons
     #ttotal_time=100
     
-    cost_matrix=np.random.randint(1,15,(num_nodes,num_nodes)) #this will generate a random cost matrix. We multiply by 10 for larger values
+    cost_matrix=np.random.randint(1,15,(num_nodes,num_nodes)) #this will generate a random cost matrix.
     cost_matrix=cost_matrix + cost_matrix.T #ensure symmetry of the matrix
     
-    score_vector=np.random.randint(1,5,(num_nodes)) #this will generate a random score matrix. We multiply by 10 for larger values
+    score_vector=np.random.randint(1,5,(num_nodes)) #this will generate a random score matrix.
     score_vector[0]=0 #since the 0th node, start node, has no value!
-    #score_vector[-1]=0 #since the last node, basically the return point, has no value
+    
     
     
     #sample matrix is given below
